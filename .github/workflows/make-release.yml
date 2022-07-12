@@ -39,32 +39,3 @@ jobs:
           name: jar
           path: JMusicBot-${{ github.event.inputs.version_number }}.jar
           if-no-files-found: error
-  create_release:
-    name: Create Release
-    runs-on: ubuntu-latest
-    needs: build_jar
-    steps:
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@v3.0.0
-        with:
-          name: jar
-          path: .
-      - name: Show Artifacts
-        run: ls -R
-      - name: Create Release
-        uses: ncipollo/release-action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.event.inputs.version_number }}
-          name: Version ${{ github.event.inputs.version_number }}
-          draft: true
-          prerelease: false
-          artifacts: "*.jar"
-          body: |
-            ${{ github.event.inputs.info }}
-            
-            ---
-            ### Setup
-            https://jmusicbot.com/setup  
-            https://jmusicbot.com/config  
-            # Download: [JMusicBot-${{ github.event.inputs.version_number }}.jar](https://github.com/jagrosh/MusicBot/releases/download/${{ github.event.inputs.version_number }}/JMusicBot-${{ github.event.inputs.version_number }}.jar)

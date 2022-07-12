@@ -26,6 +26,7 @@ import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.User;
 
 import java.util.List;
+import java.awt.Color;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -83,7 +84,7 @@ public class ForceRemoveCmd extends DJCommand
             builder
             .setSelection((msg, i) -> removeAllEntries(found.get(i-1).getUser(), event))
             .setText("Found multiple users:")
-            .setColor(event.getSelfMember().getColor())
+            .setColor(Color.decode("#584DFF"))
             .useNumbers()
             .setUsers(event.getAuthor())
             .useCancelButton(true)

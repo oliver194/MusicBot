@@ -23,6 +23,7 @@ import com.sedmelluq.discord.lavaplayer.player.event.AudioEventAdapter;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrack;
 import com.sedmelluq.discord.lavaplayer.track.AudioTrackEndReason;
 import com.sedmelluq.discord.lavaplayer.track.playback.AudioFrame;
+import java.awt.Color;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -208,7 +209,7 @@ public class AudioHandler extends AudioEventAdapter implements AudioSendHandler
             MessageBuilder mb = new MessageBuilder();
             mb.append(FormatUtil.filter(manager.getBot().getConfig().getSuccess()+" **Now Playing in "+guild.getSelfMember().getVoiceState().getChannel().getAsMention()+"...**"));
             EmbedBuilder eb = new EmbedBuilder();
-            eb.setColor(guild.getSelfMember().getColor());
+            eb.setColor(Color.decode("#584DFF"));
             RequestMetadata rm = getRequestMetadata();
             if(rm.getOwner() != 0L)
             {
@@ -255,7 +256,7 @@ public class AudioHandler extends AudioEventAdapter implements AudioSendHandler
                 .setEmbeds(new EmbedBuilder()
                 .setTitle("No music playing")
                 .setDescription(STOP_EMOJI+" "+FormatUtil.progressBar(-1)+" "+FormatUtil.volumeIcon(audioPlayer.getVolume()))
-                .setColor(guild.getSelfMember().getColor())
+                .setColor(Color.decode("#584DFF"))
                 .build()).build();
     }
     

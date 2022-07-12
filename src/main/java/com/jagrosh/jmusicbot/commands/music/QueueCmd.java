@@ -15,6 +15,7 @@
  */
 package com.jagrosh.jmusicbot.commands.music;
 
+import java.awt.Color;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import com.jagrosh.jdautilities.command.CommandEvent;
@@ -98,7 +99,7 @@ public class QueueCmd extends MusicCommand
         builder.setText((i1,i2) -> getQueueTitle(ah, event.getClient().getSuccess(), songs.length, fintotal, settings.getRepeatMode()))
                 .setItems(songs)
                 .setUsers(event.getAuthor())
-                .setColor(event.getSelfMember().getColor())
+                .setColor(Color.decode("#584DFF"))
                 ;
         builder.build().paginate(event.getChannel(), pagenum);
     }

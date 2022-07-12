@@ -15,6 +15,7 @@
  */
 package com.jagrosh.jmusicbot.commands.music;
 
+import java.awt.Color;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.jagrosh.jlyrics.LyricsClient;
 import com.jagrosh.jmusicbot.Bot;
@@ -69,7 +70,7 @@ public class LyricsCmd extends MusicCommand
 
             EmbedBuilder eb = new EmbedBuilder()
                     .setAuthor(lyrics.getAuthor())
-                    .setColor(event.getSelfMember().getColor())
+                    .setColor(Color.decode("#584DFF"))
                     .setTitle(lyrics.getTitle(), lyrics.getURL());
             if(lyrics.getContent().length()>15000)
             {

@@ -31,8 +31,8 @@
         <!-- Discord Dependencies -->
         <dependency>
             <groupId>net.dv8tion</groupId> 
-            <artifactId>JDA5</artifactId> 
-            <version>5.0.0-alpha.13</version>
+            <artifactId>JDA</artifactId> 
+            <version>4.4.0_352</version>
         </dependency>
         <dependency>
             <groupId>com.jagrosh</groupId>

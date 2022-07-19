@@ -7,11 +7,11 @@
     <packaging>jar</packaging>
     
     <repositories>
-        <!-- repository>
+        <repository>
             <id>dv8tion</id>
             <name>m2-dv8tion</name>
             <url>https://m2.dv8tion.net/releases</url>
-        </repository -->
+        </repository>
         <repository>
             <id>central</id>
             <name>bintray</name>
@@ -29,16 +29,11 @@
     
     <dependencies>
         <!-- Discord Dependencies -->
-        <!-- dependency>
+        <dependency>
             <groupId>net.dv8tion</groupId> 
             <artifactId>JDA</artifactId> 
             <version>4.4.0_352</version>
-        </dependency --> 
-	<dependency>
-	    <groupId>com.github.DV8FromTheWorld</groupId>
-	    <artifactId>JDA</artifactId>
-	    <version>v5.0.0-alpha.16</version>
-	</dependency>
+        </dependency>
         <dependency>
             <groupId>com.jagrosh</groupId>
             <artifactId>jda-utilities</artifactId>

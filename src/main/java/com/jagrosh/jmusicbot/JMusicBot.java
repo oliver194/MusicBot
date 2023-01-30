@@ -88,7 +88,7 @@ public class JMusicBot
         
         AboutCommand aboutCommand = new AboutCommand(Color.decode("#584DFF"),
                                 "a modified version of [JMusicBot.](https://github.com/jagrosh/MusicBot) (v" + OtherUtil.getCurrentVersion() + ")",
-                                new String[]{"Modified version of JMusicBot", "High-quality music playback", "FairQueue™ Technology", "Easy to host yourself", "Modified for Huaweicord."},
+                                new String[]{"Modified version of JMusicBot", "High-quality music playback", "FairQueue™ Technology", "Easy to host yourself"},
                                 RECOMMENDED_PERMS);
         aboutCommand.setIsAuthor(false);
         aboutCommand.setReplacementCharacter("\uD83C\uDFB6"); // 🎶
